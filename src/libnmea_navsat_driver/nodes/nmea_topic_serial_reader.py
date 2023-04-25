@@ -60,8 +60,8 @@ def main():
 
     nmea_pub = rospy.Publisher("nmea_sentence", Sentence, queue_size=1)
 
-    serial_port = rospy.get_param('~port', '/dev/ttyUSB0')
-    serial_baud = rospy.get_param('~baud', 4800)
+    serial_port = rospy.get_param('~port', '/dev/gps_usb')
+    serial_baud = rospy.get_param('~baud', 115200)
 
     # Get the frame_id
     frame_id = RosNMEADriver.get_frame_id()
